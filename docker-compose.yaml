@@ -66,8 +66,8 @@ services:
       - rossmann-network
     command: >
       bash -c "
-      TOPICS=('oltp_update_product_quantity' 'local_db_upsert_category')
-      PARTITIONS=(3 1)
+      TOPICS=('oltp_update_product_quantity' 'local_db_upsert_category' 'local_db_upsert_product')
+      PARTITIONS=(3 1 1)
 
       for i in $${!TOPICS[@]}; do
         TOPIC=$${TOPICS[i]}
