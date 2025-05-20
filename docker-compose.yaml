@@ -1,5 +1,4 @@
 ### For create network
-
 # docker network create --driver bridge rossmann-network
 # docker network inspect rossmann-network
 
