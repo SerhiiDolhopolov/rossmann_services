@@ -1,6 +1,18 @@
-#docker network create --driver bridge rossmann-network
-#docker network inspect rossmann-network
-#docker compose exec kafka kafka-console-producer.sh --bootstrap-server localhost:9092 --topic oltp_update_product_quantity
+### For create network
+
+# docker network create --driver bridge rossmann-network
+# docker network inspect rossmann-network
+
+### Check kafka topics
+# docker compose exec kafka kafka-console-producer.sh --bootstrap-server localhost:9092 --topic oltp_update_product_quantity
+
+### For save minio volume 
+# docker run --rm -v minio-data:/data -v ${PWD}:/backup busybox tar -czf /backup/minio-data.tar.gz -C /data .
+
+### For restore minio volume
+# docker volume create minio-data
+# docker run --rm -v minio-data:/data -v ${PWD}:/backup busybox tar -xzf /backup/minio-data.tar.gz -C /data
+
 networks:
   rossmann-network:
     external: true
