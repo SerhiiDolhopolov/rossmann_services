@@ -70,7 +70,7 @@ services:
     volumes:
       - clickhouse-data:/var/lib/clickhouse
       - ./clickhouse-request:/docker-entrypoint-initdb.d
-      - ./config.xml:/etc/clickhouse-server/config.d/config.xml:ro
+      - ./clickhouse-config.xml:/etc/clickhouse-server/config.d/config.xml:ro
       - ./clickhouse-log:/var/log/clickhouse-server
     ulimits:
       nofile:
