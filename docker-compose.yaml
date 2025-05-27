@@ -69,7 +69,7 @@ services:
       - CLICKHOUSE_PASSWORD=admin
     volumes:
       - clickhouse-data:/var/lib/clickhouse
-      - ./clickhouse-request:/docker-entrypoint-initdb.d
+      - ./clickhouse-requests:/docker-entrypoint-initdb.d:ro
       - ./clickhouse-config.xml:/etc/clickhouse-server/config.d/config.xml:ro
       - ./clickhouse-log:/var/log/clickhouse-server
     ulimits:
