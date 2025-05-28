@@ -83,24 +83,18 @@ services:
       retries: 5
       start_period: 30s
 
-  tabix:
-    image: spoonest/clickhouse-tabix-web-client:latest
-    container_name: tabix
+  ch-ui:
+    image: ghcr.io/caioricciuti/ch-ui:latest
+    container_name: ch-ui
     networks:
       - rossmann-network
+    restart: always
     ports:
-      - 1202:80
+      - "1202:5521"
     environment:
-      - CLICKHOUSE_HOST=clickhouse
-      - CLICKHOUSE_PORT=8123
-      - CLICKHOUSE_USER=admin
-      - CLICKHOUSE_PASSWORD=admin
-      - CLICKHOUSE_DB=delivery
-    depends_on:
-      - clickhouse
-    restart: unless-stopped
-    
-
+      VITE_CLICKHOUSE_URL: "http://localhost:1200"
+      VITE_CLICKHOUSE_USER: "admin"
+      VITE_CLICKHOUSE_PASS: "admin"
   
   kafka:
     image: 'bitnami/kafka:latest'

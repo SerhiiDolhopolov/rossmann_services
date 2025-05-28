@@ -1,5 +1,6 @@
 CREATE DATABASE IF NOT EXISTS shop_reports;
 
+
 CREATE TABLE IF NOT EXISTS shop_reports.delivery (
     shop_id UInt32,
     country String,
@@ -13,8 +14,10 @@ CREATE TABLE IF NOT EXISTS shop_reports.delivery (
     quantity UInt32,
     accepted_time DateTime
 ) ENGINE = MergeTree()
+PARTITION BY toYYYYMM(accepted_time)
 ORDER BY (shop_id, accepted_time)
-TTL accepted_time + INTERVAL 6 MONTH;
+TTL accepted_time + INTERVAL 4 MONTH;
+
 
 CREATE TABLE IF NOT EXISTS shop_reports.transactions (
     shop_id UInt32,
@@ -38,7 +41,8 @@ CREATE TABLE IF NOT EXISTS shop_reports.transactions (
     transaction_amount Float64,
     loyalty_discount Float64,
     discount_type String,
-    transaction_total_amount Float64,
+    transaction_total_amount Float64
 ) ENGINE = MergeTree()
-ORDER BY (shop_id, transaction_id)
-TTL transaction_time + INTERVAL 6 MONTH;
+PARTITION BY toYYYYMM(transaction_time)
+ORDER BY (shop_id, transaction_time)
+TTL transaction_time + INTERVAL 4 MONTH;
