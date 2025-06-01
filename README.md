@@ -1,9 +1,9 @@
 <!-- omit in toc -->
 ## Services
-[![docker](https://img.shields.io/badge/docker-d6123c?style=for-the-badge&logo=docker&logoColor=white)](#)
-[![kafka](https://img.shields.io/badge/kafka-d6123c?style=for-the-badge&logo=apachekafka&logoColor=white)](#)
-[![minio s3](https://img.shields.io/badge/minio%20s3-d6123c?style=for-the-badge&logo=minio&logoColor=white)](#)
-[![clickhouse](https://img.shields.io/badge/clickhouse-d6123c?style=for-the-badge&logo=clickhouse&logoColor=white)](#)
+[![docker](https://img.shields.io/badge/docker-d6123c?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![kafka](https://img.shields.io/badge/kafka-d6123c?style=for-the-badge&logo=apachekafka&logoColor=white)](https://kafka.apache.org/)
+[![minio s3](https://img.shields.io/badge/minio%20s3-d6123c?style=for-the-badge&logo=minio&logoColor=white)](https://min.io/)
+[![clickhouse](https://img.shields.io/badge/clickhouse-d6123c?style=for-the-badge&logo=clickhouse&logoColor=white)](https://clickhouse.com/)
 
 <!-- omit in toc -->
 ## Table of Contents
@@ -64,18 +64,18 @@ The diagram was created at [draw.io](https://app.diagrams.net/)
 
 ## Docker Containers
 **This docker section includes:**
-  - [Adminer](https://www.adminer.org/en/) to view SQL databases. 
+  - **[Adminer](https://www.adminer.org/en/)** to view SQL databases. 
     - 🌐 Web interface: 
       - [localhost:1000](http://localhost:1000) 
 
-  - [Minio S3](https://min.io/) as a data lake
+  - **[Minio S3](https://min.io/)** as a data lake
     - 🌐 Web interface: 
       - [localhost:1101](http://localhost:1101)
-  - [ClickHouse](https://clickhouse.com/) as a DWH
-  - [ch-ui](https://ch-ui.com/) to view ClickHouse
+  - **[ClickHouse](https://clickhouse.com/)** as a DWH
+  - **[ch-ui](https://ch-ui.com/)** to view ClickHouse
     - 🌐 Web interface: 
       - [localhost:1202](http://localhost:1202)
-  - [Kafka](https://kafka.apache.org/) as a message broker
+  - **[Kafka](https://kafka.apache.org/)** as a message broker
 
 ## ClickHouse Schema
 TTL of records = 4 months.
