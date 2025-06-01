@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS shop_reports.delivery (
 ) ENGINE = MergeTree()
 PARTITION BY toYYYYMM(accepted_time)
 ORDER BY (shop_id, accepted_time)
-TTL accepted_time + INTERVAL 4 MONTH;
+TTL accepted_time + INTERVAL 20 MONTH;
 
 
 CREATE TABLE IF NOT EXISTS shop_reports.transactions (
@@ -45,4 +45,4 @@ CREATE TABLE IF NOT EXISTS shop_reports.transactions (
 ) ENGINE = MergeTree()
 PARTITION BY toYYYYMM(transaction_time)
 ORDER BY (shop_id, transaction_time)
-TTL transaction_time + INTERVAL 4 MONTH;
+TTL transaction_time + INTERVAL 20 MONTH;
