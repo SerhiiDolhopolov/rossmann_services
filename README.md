@@ -21,11 +21,11 @@
 🟢 **This is part 1 of 7 docker sections in the project.**
 
 This project is the final task for the Big Data Infrastructure Technologies course at [BigDataLab](https://www.bigdatalab.com.ua/).
-The goal of the project is to build the architecture of the Rossmann supermarket. You will demonstrate the architecture's operation locally and also create a diagram of cloud technologies.
+The goal of the project is to build the architecture of the [Rossmann supermarket](https://www.rossmann.de/de/). To demonstrate the architecture's operation locally and also create a diagram of cloud technologies.
 
 ## Project Workflow
 ### Domain
-Rossmann's business model focuses on offline customers who generate the main revenue. The web environment serves as a supplementary channel. Real-time data is not critical, as products are non-unique; therefore, inventory updates can be sent periodically to ensure timely restocking.
+[Rossmann's](https://www.rossmann.de/de/) business model focuses on offline customers who generate the main revenue. The web environment serves as a supplementary channel. Real-time data is not critical, as products are non-unique; therefore, inventory updates can be sent periodically to ensure timely restocking.
 <table>
   <tr>
     <th style="width: 120px; border-right:2px solid grey;">Criterion</th>
