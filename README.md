@@ -18,7 +18,7 @@
 - [Next Section of the Project](#next-section-of-the-project)
 
 ## Introduction
-🟢 **This is part 1 of 7 Docker sections in the [🔴 Supermarket Simulation Project](https://github.com/SerhiiDolhopolov/rossmann_services).**
+🟢 **This is part 1 of 7 Docker sections in the 🔴 [Supermarket Simulation Project](https://github.com/SerhiiDolhopolov/rossmann_services).**
 
 This project is the final task for the Big Data Infrastructure Technologies course at [BigDataLab](https://www.bigdatalab.com.ua/).
 
