@@ -20,8 +20,6 @@
 ## Introduction
 🟢 **This is part 1 of 7 Docker sections in the [🔴 Supermarket Simulation Project](https://github.com/SerhiiDolhopolov/rossmann_services).**
 
-[🔵 **<- Preview part with an introduction.**](https://github.com/SerhiiDolhopolov/rossmann_services)
-
 This project is the final task for the Big Data Infrastructure Technologies course at [BigDataLab](https://www.bigdatalab.com.ua/).
 The goal of the project is to build the architecture of the [Rossmann supermarket](https://www.rossmann.de/de/), demonstrate the architecture's operation locally, and create a diagram of cloud technologies.
 
