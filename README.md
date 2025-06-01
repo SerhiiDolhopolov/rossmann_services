@@ -18,10 +18,12 @@
 - [Next Section of the Project](#next-section-of-the-project)
 
 ## Introduction
-🟢 **This is part 1 of 7 docker sections in the project.**
+🟢 **This is part 1 of 7 Docker sections in the [🔴 Supermarket Simulation Project](https://github.com/SerhiiDolhopolov/rossmann_services).**
+
+[🔵 **<- Preview part with an introduction.**](https://github.com/SerhiiDolhopolov/rossmann_services)
 
 This project is the final task for the Big Data Infrastructure Technologies course at [BigDataLab](https://www.bigdatalab.com.ua/).
-The goal of the project is to build the architecture of the [Rossmann supermarket](https://www.rossmann.de/de/). To demonstrate the architecture's operation locally and also create a diagram of cloud technologies.
+The goal of the project is to build the architecture of the [Rossmann supermarket](https://www.rossmann.de/de/), demonstrate the architecture's operation locally, and create a diagram of cloud technologies.
 
 ## Project Workflow
 ### Domain
@@ -63,10 +65,17 @@ The diagram was created at [draw.io](https://app.diagrams.net/)
 
 ## Docker Containers
 **This docker section includes:**
-  - [Adminer](https://www.adminer.org/en/) to view SQL databases
+  - [Adminer](https://www.adminer.org/en/) to view SQL databases. 
+    - 🌐 Web interface: 
+      - [localhost:1000](http://localhost:1000) 
+
   - [Minio S3](https://min.io/) as a data lake
+    - 🌐 Web interface: 
+      - [localhost:1101](http://localhost:1101)
   - [ClickHouse](https://clickhouse.com/) as a DWH
   - [ch-ui](https://ch-ui.com/) to view ClickHouse
+    - 🌐 Web interface: 
+      - [localhost:1202](http://localhost:1202)
   - [Kafka](https://kafka.apache.org/) as a message broker
 
 ## ClickHouse Schema
