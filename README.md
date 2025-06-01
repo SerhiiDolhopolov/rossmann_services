@@ -21,6 +21,7 @@
 🟢 **This is part 1 of 7 Docker sections in the [🔴 Supermarket Simulation Project](https://github.com/SerhiiDolhopolov/rossmann_services).**
 
 This project is the final task for the Big Data Infrastructure Technologies course at [BigDataLab](https://www.bigdatalab.com.ua/).
+
 The goal of the project is to build the architecture of the [Rossmann supermarket](https://www.rossmann.de/de/), demonstrate the architecture's operation locally, and create a diagram of cloud technologies.
 
 ## Project Workflow
@@ -81,19 +82,22 @@ TTL of records = 4 months.
 
 Partitions by month of accepted_time/transaction_time.
 
+The schema was created at [chartdb.io](https://chartdb.io/)
+
 ![ClickHouse schema](images/clickhouse_db.png)
 
 ## Getting Started
 **To start:**
-1. Run the command below to create a network. Thanks to the network, docker containers will see each other. (Execute only once)
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+2. Run the command below to create a network. Thanks to the network, docker containers will see each other. (Execute only once)
 ```bash
 docker network create --driver bridge rossmann-network
 ```
-2. Restore the S3 volume with product images (Execute only once):
+3. Restore the S3 volume with product images (Execute only once):
 ```bash
 docker run --rm -v minio-data:/data -v ${PWD}:/backup busybox tar -xzf /backup/minio-data.tar.gz -C /data
 ```
-3. Run services:
+4. Run services:
 ```bash
 docker compose up --build
 ```
